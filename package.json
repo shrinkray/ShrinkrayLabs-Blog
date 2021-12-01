@@ -18,6 +18,7 @@
 		"@sveltejs/adapter-static": "^1.0.0-next.13",
 		"@sveltejs/adapter-vercel": "^1.0.0-next.26",
 		"@sveltejs/kit": "^1.0.0-next.137",
+		"@tailwindcss/jit": "^0.1.18",
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
 		"@typescript-eslint/parser": "^4.19.0",
 		"autoprefixer": "^10.2.5",
@@ -28,13 +29,13 @@
 		"husky": "^5.2.0",
 		"lint-staged": "^10.5.4",
 		"npm-run-all": "^4.1.5",
-		"postcss": "^8.2.7",
-		"postcss-load-config": "^3.0.1",
+		"postcss": "^8.4.4",
+		"postcss-load-config": "^3.1.0",
 		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
 		"svelte": "^3.29.0",
 		"svelte-preprocess": "^4.6.9",
-		"tailwindcss": "^2.0.3",
+		"tailwindcss": "^2.2.19",
 		"tslib": "^2.0.0",
 		"typescript": "^4.0.0",
 		"vite": "^2.1.0"
@@ -59,6 +60,7 @@
 	"dependencies": {
 		"@notionhq/client": "^0.2.3",
 		"@tailwindcss/typography": "^0.4.1",
+		"dotenv": "^10.0.0",
 		"svelte-feather-icons": "^3.3.0",
 		"svelte-seo": "^1.1.0"
 	}

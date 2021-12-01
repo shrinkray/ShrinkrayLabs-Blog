@@ -1,30 +1,25 @@
-const { tailwindExtractor } = require('tailwindcss/lib/lib/purgeUnusedStyles');
-const { fontFamily } = require('tailwindcss/defaultTheme')
-
-module.exports = {
-	purge: {
-		content: ['./src/**/*.{html,js,svelte,ts}'],
-		options: {
-			defaultExtractor: (content) => [
-				// If this stops working, please open an issue at https://github.com/svelte-add/tailwindcss/issues rather than bothering Tailwind Labs about it
-				...tailwindExtractor(content),
-				// Match Svelte class: directives (https://github.com/tailwindlabs/tailwindcss/discussions/1731)
-				...[...content.matchAll(/(?:class:)*([\w\d-/:%.]+)/gm)].map(
-					([_match, group, ..._rest]) => group
-				)
-			],
-			keyframes: true
-		}
-	},
+const config = {
+	mode: 'jit',
+	purge: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		fontFamily: {
-			sans: ['Andada Pro', ...fontFamily.sans],
-		},
 		extend: {
+			colors: {
+				sky: {
+					50: '#111107101',
+					100: '#f1f9fd',
+					200: '#b6e0f7',
+					300: '#7ac7f0',
+					400: '#3faee9',
+					500: '#178ece',
+					600: '#1372a5',
+					700: '#0e557c',
+					800: '#0a3c57',
+					900: '#05202e'
+				}
+			}
 		}
 	},
-	variants: {
-		extend: {}
-	},
-	require('@tailwindcss/typography'),
+	plugins: [require('@tailwindcss/typography')]
 };
+
+module.exports = config;

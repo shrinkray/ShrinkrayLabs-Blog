@@ -1,17 +1,13 @@
-import sveltePreprocess from 'svelte-preprocess'
+import sveltePreprocess from 'svelte-preprocess';
 import vercel from '@sveltejs/adapter-vercel';
-// import node from '@sveltejs/adapter-node'
-// import adapterStatic from '@sveltejs/adapter-static'
+
 
 /** @type {import('@sveltejs/kit').Config} */
-export default {
+const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
 	preprocess: [
 		sveltePreprocess({
-			defaults: {
-				style: 'postcss'
-			},
 			postcss: true
 		})
 	],
@@ -20,7 +16,7 @@ export default {
 		// You can create optimized builds for different platforms by
 		// specifying a different adapter
         adapter: vercel(),
-		// adapter: adapterStatic({
+				// adapter: adapterStatic({
         //     pages: 'build',
         //     assets: 'build',
         //     fallback: null
@@ -30,3 +26,5 @@ export default {
 		target: '#svelte',
 	}
 };
+
+export default config;
